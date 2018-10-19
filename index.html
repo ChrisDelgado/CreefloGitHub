@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+<head>
+  <meta charset="utf-8">
+  <title>Christopher Delgado</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="bg">
+  <style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lato", sans-serif;
+  }
+
+  body,
+  html {
+    background-size: cover;
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+  }
+  .gradient,
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3,
+  .bgimg-4,
+  .bgimg-5,
+  .bgimg-6 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bgimg-1 {
+    background-image: url('https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/43148739_10155572332585964_7494835592149073920_o.jpg?_nc_cat=106&oh=bad31244e5f8e3a7fb9dcc78af1e1f9f&oe=5C236A3D');
+    min-height: 100%;
+  }
+
+  /* music image */
+
+  .bgimg-2 {
+    background-image: url("https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/42989850_10155572332735964_3213672797779787776_o.jpg?_nc_cat=102&oh=03cab2eee3d7d98d848c3e82bd1f686f&oe=5C51F03F");
+    min-height: 400px;
+  }
+
+  /* dexter image */
+
+  .bgimg-3 {
+    background-image: url("https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/43023836_10155572344260964_7711726428370239488_o.jpg?_nc_cat=102&oh=65d48b4bff82a9e5c7595eeafaf0a7be&oe=5C5588DD");
+    min-height: 400px;
+  }
+
+  /* reel image */
+
+  .bgimg-4 {
+    background-image: url("https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/43158665_10155573724190964_686807889590878208_o.jpg?_nc_cat=102&oh=344c3609ce242d0907e4da12fb127bda&oe=5C4F7F02");
+    min-height: 400px;
+  }
+
+  /* ressmume image */
+
+  .bgimg-5 {
+    background-image: url("https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/43083187_10155572332605964_1091868875206688768_o.jpg?_nc_cat=104&oh=9627058b87def9d1c9d6ec849bd249aa&oe=5C18A70A");
+    min-height: 400px;
+  }
+
+  /* contact image */
+
+  .bgimg-6 {
+    background-image: url("https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/42986572_10155572332425964_4345126964919533568_o.jpg?_nc_cat=104&oh=fe3cd0b18bf17e1ca154d2b2c2948d76&oe=5C245865");
+    min-height: 400px;
+  }
+
+  .w3-wide {
+    letter-spacing: 10px;
+  }
+
+  .w3-hover-opacity {
+    cursor: pointer;
+  }
+
+  /* Turn off parallax scrolling for tablets and phones */
+
+  @media only screen and (max-device-width: 1600px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3,
+    .bgimg-4,
+    .bgimg-5,
+    .bgimg-6 {
+      background-attachment: scroll;
+      min-height: 400px;
+    }
+  }
+  </style>
+
+  <body>
+
+    <!-- navigation bar -->
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-white w3-hide-medium w3-hide-large w3-left"
+        href="javascript:void(0);"
+        onclick="toggleFunction()"
+        title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button w3-hover-DarkGrey w3-hide-small"><i class="fa fa-home"></i>Home</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hover-DarkGrey w3-hide-small"><i class="fa fa-grav"></i> About</a>
+        <a href="#music" class="w3-bar-item w3-button w3-hover-DarkGrey w3-hide-small"><i class="fa fa-fire"></i> Music</a>
+        <a href="#design" class="w3-bar-item w3-button w3-hover-DarkGrey w3-hide-small"><i class="fa fa-microchip"></i> Design</a>
+        <a href="#reel" class="w3-bar-item w3-button w3-hover-DarkGrey w3-hide-small"><i class="fa fa-film"></i> Reel</a>
+        <a href="#ressume" class="w3-bar-item w3-button w3-hover-DarkGrey w3-hide-small"><i class="fa fa-folder"></i> Resumé</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-hover-DarkGrey w3-hide-small"><i class="fa fa-address-card"></i> Contact</a>
+        <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-search"></i></a> -->
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+        <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">About</a>
+        <a href="#music" class="w3-bar-item w3-button" onclick="toggleFunction()">Music</a>
+        <a href="#design" class="w3-bar-item w3-button" onclick="toggleFunction()">Design</a>
+        <a href="#reel" class="w3-bar-item w3-button" onclick="toggleFunction()">Reel</a>
+        <a href="#ressume" class="w3-bar-item w3-button" onclick="toggleFunction()">Ressumé</a>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
+        <a href="#" class="w3-bar-item w3-button">Search</a>
+      </div>
+    </div>
+
+    <!-- FName image & text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+      <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Christopher <span class="w3-hide-small">Delgado</span>
+      </div>
+    </div>
+
+    <!-- about section -->
+    <div class="w3-content w3-container w3-padding-32" id="about">
+      <p class="w3-wide w3-center"><i class="fa fa-laptop"></i>Sound Design</p>
+      <div class="w3-light-grey">
+      </div>
+      <p class="w3-wide w3-center"><i class="fa fa-music"></i>Live & Studio Recording</p>
+      <div class="w3-light-grey">
+      </div>
+      <p class="w3-wide w3-center"><i class="fa fa-gear"></i>Engineering</p>
+      <div class="w3-light-grey">
+      </div>
+      <p class="w3-content w3-container w3-padding-32" id="about">Growing up in a household with avant-garde artists as parents taught me how to live, love and create to the grave. My father, Sean Delgado, whom I miss every single day, was a director for the Directors Guild of America. He was a man with unparalleled
+        taste in film, music, literature and fine art and greatly influenced how I have developed as an artist. He introduced me to the powerful films of Stanley Kubrick and the numerous genre eclectic albums on vinyl in my bedroom. Of those albums, Pink
+        Floyd’s album Animals particularly resonates with me because it inspires non compos mentis ideas. The majority of my art comes from deep places in my heart. Dating back to my childhood, when I was a tiny bean in the back of my fathers old Saab
+        900, I would scream and cry, “ta peddy, ta peddy,” until he finally figured out I wanted to hear the Tom Petty cassette he usually played. It is memories like these that remind me why I crave such beautiful, uplifting sounds
+      </p>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <p></p>
+            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/43161177_10155572404815964_111417537626898432_n.jpg?_nc_cat=104&oh=3dd0c8b4d05279496348bd73e67c25ee&oe=5C5BFD8C" class="w3-round w3-image w3-opacity" alt="Photo of Me" width="500"
+            height="333">
+          </div>
+
+          <div class="w3-col m6 w3-hide-small w3-padding-large">
+            <p>Driven by aspiration and the experimentation of manipulating sounds to indulge ears of a diverse audience, electronic music production and the endless technical aspects around it propel me forward to create a musical zeitgeist for my generation.
+              Although possible, it is highly unlikely for a single voice to attract the attention of a generation. Collaboration is essential in the industry. Whether the goal is to create an abstract music video or to generate contemporary visuals for
+              a show, collaboration is crucial to executing musical innovation. In my experience, the most inventive parts of my pieces sometimes come completely by chance. I learned this through experience but also from studying the avant-garde master
+              of composition, John Cage. He is well known for creating a chart system based on the I Ching, an ancient rolling of coins also known as “The Book of Change”. The chart system decided which mode and which of the twelve possible transpositions
+              a composer could use at any given time. A simple controlled randomization allows the writer to explore a vast array of possible outcomes.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Music Section -->
+      <div class="w3-content w3-container w3-padding-32" id="music"></div>
+        <div class="bgimg-2 w3-display-container w3-opacity-min">
+          <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">Music</span>
+          </div>
+        </div>
+
+        <!-- Music Section -->
+
+        <!-- <br> -->
+        <!-- Sissors -->
+        <div class="w3-row-padding w3-text-white w3-center">
+          <div class="w3-col  m3"><i class="fa fa-soundcloud w3-hover-opacity"></i>
+            <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/334847330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          </a>
+        </div>
+        <!-- Fug it -->
+        <div class="w3-col m3"><i class="fa fa-soundcloud w3-hover-opacity"></i>
+          <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/328965596&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+        <!-- Liament -->
+        <div class="w3-col m3"><i class="fa fa-soundcloud w3-hover-opacity"></i>
+          <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/386806208&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+        <!-- What do you want -->
+        <div class="w3-col m3"><i class="fa fa-soundcloud w3-hover-opacity"></i>
+          <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/238771109&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+        <!-- close ur eyes -->
+        <div class="w3-col m3"><i class="fa fa-soundcloud w3-hover-opacity"></i>
+          <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/70624280&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+        <!-- matte -->
+        <div class="w3-col m3"><i class="fa fa-soundcloud w3-hover-opacity"></i>
+          <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/368765945&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+        <!-- Penicillin Pills -->
+        <div class="w3-col m3"><i class="fa fa-soundcloud w3-hover-opacity"></i>
+          <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330151782&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+        <!-- Fall Down -->
+        <div class="w3-col m3"><i class="fa fa-soundcloud w3-hover-opacity"></i>
+          <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/496370310&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+
+      </div>
+
+
+    <!-- Design Section -->
+    <div class="w3-content w3-container w3-padding-32" id="design"></div>
+      <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+          <span class="w3-xxlarge w3-text-white w3-wide">Design</span>
+        </div>
+      </div>
+
+      <h3 class="w3-center">TriDExTER</h3>
+      <p class="w3-center"><em>A custom MIDI / OSC control interface.</em><br>
+
+        <div class="w3-row-padding w3-center">
+          <div class="w3-col m3">
+            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/42972055_10155572344290964_4158002880579633152_o.jpg?_nc_cat=102&oh=5d0361def487d21debefbdebc15c78b5&oe=5C24EC5C" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+          </div>
+
+          <div class="w3-col m3">
+            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/43007621_10155572344205964_3098910412637208576_o.jpg?_nc_cat=100&oh=c35ee79eb8da80143b05f787d89ee017&oe=5C4F52AA" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+          </div>
+
+          <div class="w3-col m3">
+            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/r270/43056107_10155572386965964_468410967252795392_o.jpg?_nc_cat=108&oh=3eb2d642c767a7c090af0d5a0ef87566&oe=5C54A2EC" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+          </div>
+
+          <div class="w3-col m3">
+            <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/r270/42959064_10155572387035964_8259148129396326400_o.jpg?_nc_cat=111&oh=4c0eeac7cb3268a2c1e5f861c9cfc854&oe=5C63221A" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+          </div>
+
+      </p>
+    </div>
+
+    <!-- Reel Section -->
+    <!-- reel Image -->
+    <div class="w3-content w3-container w3-padding-32" id="reel"></div>
+      <!-- <br> -->
+      <div class="bgimg-4 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+          <span class="w3-xxlarge w3-text-white w3-wide">Reel</span>
+        </div>
+      </div>
+
+      <p class="w3-center">
+        <em></em>
+        <br>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/yt303-kdN8k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </p>
+
+      <p class="w3-center">
+        <em></em>
+        <br>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/35vbF3tV_0U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </p>
+
+
+
+    <!-- Ressume Section -->
+    <div class="w3-content w3-container w3-padding-32" id="ressume">
+    </div>
+    <div class="bgimg-5 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">Resumé</span>
+      </div>
+    </div>
+
+    <div>
+      <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/43030758_10155573572765964_5112314123777998848_o.jpg?_nc_cat=109&oh=c176d45e61f02612722555a54e40fe61&oe=5C1695A1" alt="" class="responsive">
+    </img>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+      <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+    <!-- Contact Image -->
+    <div class="w2-content w3-container w3-padding-64" id="contact">
+      <div class="bgimg-6 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+          <span class="w3-xxlarge w3-text-white w3-wide">Contact</span>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="w2-row w3-padding-2 w3-section">
+        <div class="w2-col m2 w3-container">
+          <p>Questions or sound design enquireies via email:</p>
+          <i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i> Hollywood, CA<br>
+          <p></p>
+          <i class="fa fa-phone fa-fw  w3-xlarge w3-margin-right"></i> Phone: (323)384-1163<br>
+          <p></p>
+          <i class="fa fa-envelope fa-fw  w3-xlarge w3-margin-right"></i> Email: christopherdelgado@alum.calarts.edu<br>
+        </div>
+      </div>
+    </div>
+
+    <!-- End -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity">
+      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <div class="w3-xlarge w3-section">
+
+        <!-- linked in -->
+        <a href="https://www.linkedin.com/in/chris-delgado-5763b6b7/" target="_blank">
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </a>
+
+        <!-- soundcloud -->
+        <a href="https://soundcloud.com/chrisdel-g" target="_blank">
+          <i class="fa fa-soundcloud w3-hover-opacity"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/creeflo/" target="_blank">
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+        </a>
+
+        <!-- facebook -->
+        <a href="https://www.facebook.com/forthesakeofdelgado" target="_blank">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        </a>
+
+        <!-- twitter -->
+        <a href="https://twitter.com/Crystalgado" target="_blank">
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+        </a>
+      </div>
+
+      <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction()
+      };
+
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-black";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-black", "");
+        }
+      }
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      </script>
+    </div>
+  </div>
+</body>
+</html>
